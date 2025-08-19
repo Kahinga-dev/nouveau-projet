@@ -11,13 +11,19 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-/* Header */
-header {
-  background: #1e40af; /* deep blue */
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
+<header>
+  <div class="nav-container">
+    <div class="logo">AF</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 }
 
 header h1 {
