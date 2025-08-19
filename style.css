@@ -213,15 +213,7 @@ footer {
   .hero h1 {
     font-size: 2rem;
   }
-}
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  background: #1e40af; /* deep blue background */
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  display: inline-block;
+
 }
 <header>
   <div class="logo">AF</div>
