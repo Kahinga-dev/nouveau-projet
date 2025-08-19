@@ -114,3 +114,21 @@ footer {
     font-size: 2rem;
   }
 }
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: #1e40af; /* deep blue background */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+<header>
+  <div class="logo">AF</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
