@@ -184,3 +184,55 @@ footer {
     </li>
   </ul>
 </div>
+.social-wrap {
+  margin-top: 2rem;
+}
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+.social li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.social li a:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.social svg {
+  width: 20px;
+  height: 20px;
+  fill: #1f2937; /* gray-800 */
+}
+.social .btn {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #1e40af;
+  color: #fff;
+  border: 0;
+}
+.social .btn:hover {
+  background: #3b82f6;
+}
+
+/* Optional: keep footer neat on small screens */
+@media (max-width: 480px) {
+  .social { gap: .6rem; }
+  .social li a { width: 40px; height: 40px; }
+}
