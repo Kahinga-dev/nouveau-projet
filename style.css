@@ -35,12 +35,25 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+/* ===== LOGO ===== */
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #f6d365; /* golden accent */
-  letter-spacing: 1px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%; /* makes it round */
+  background: linear-gradient(135deg, #f6d365, #fda085, #f093fb); /* warm gradient */
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* subtle depth */
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
 }
 
 /* Nav Links */
@@ -81,12 +94,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-}
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
 }
 
 .nav-links {
