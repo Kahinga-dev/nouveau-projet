@@ -8,54 +8,89 @@ body {
 }
 
 /* ===== HEADER ===== */
+/* Sticky, slim header */
 header {
+  position: fixed;      /* sticks to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8); /* slightly transparent dark */
+  backdrop-filter: blur(6px);     /* modern glassy look */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  background: rgba(30,30,30,0.85);
-  z-index: 1000;
+  padding: 0.7rem 2rem; /* slim padding */
+  z-index: 1000;        /* always on top */
 }
 
-.logo {
-  font-size: 2rem;
+/* Logo */
+header .logo {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: white;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f6d365, #fda085, #f093fb);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  letter-spacing: 2px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+}
+
+/* Navigation - horizontal */
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #f093fb;
+header nav ul li a:hover {
+  color: #FFD580; /* warm hover effect */
 }
 
+/* Responsive tweaks for phones */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  header nav ul {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ensure content is not hidden behind sticky header */
+body {
+  padding-top: 70px; /* adjust based on header height */
+}
+/* Logo default size */
+header .logo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease; /* smooth resize */
+}
+
+/* When header is scrolled */
+header.shrink .logo-circle {
+  width: 35px;
+  height: 35px;
+  font-size: 0.8rem;
+}
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, rgba(246,211,101,0.9), rgba(253,160,133,0.9), rgba(240,147,251,0.9));
